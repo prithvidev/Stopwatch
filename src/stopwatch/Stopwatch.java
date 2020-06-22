@@ -42,32 +42,40 @@ public class Stopwatch extends javax.swing.JFrame {
         close = new javax.swing.JButton();
         minimize = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(1050, 2));
         setUndecorated(true);
 
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLayeredPane1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+        jLayeredPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         h.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         h.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         h.setText("00:");
         h.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLayeredPane1.add(h, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 27, 46, 41));
 
         m.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         m.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         m.setText("00:");
         m.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLayeredPane1.add(m, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 27, 46, 41));
 
         s.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         s.setText("00:");
         s.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLayeredPane1.add(s, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 27, 46, 41));
 
         ms.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         ms.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ms.setText("00");
         ms.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLayeredPane1.add(ms, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 29, 36, 41));
 
         start.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         start.setText("Start");
@@ -76,6 +84,7 @@ public class Stopwatch extends javax.swing.JFrame {
                 startActionPerformed(evt);
             }
         });
+        jLayeredPane1.add(start, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 81, -1, -1));
 
         stop.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         stop.setText("Stop");
@@ -84,6 +93,7 @@ public class Stopwatch extends javax.swing.JFrame {
                 stopActionPerformed(evt);
             }
         });
+        jLayeredPane1.add(stop, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 117, 63, -1));
 
         reset.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         reset.setText("Reset");
@@ -92,56 +102,9 @@ public class Stopwatch extends javax.swing.JFrame {
                 resetActionPerformed(evt);
             }
         });
+        jLayeredPane1.add(reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 153, -1, -1));
 
-        jLayeredPane1.setLayer(h, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(m, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(s, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(ms, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(start, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(stop, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(reset, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
-        jLayeredPane1.setLayout(jLayeredPane1Layout);
-        jLayeredPane1Layout.setHorizontalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(h, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(m, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(s, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ms, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addGap(116, 116, 116)
-                        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(reset)
-                            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(stop, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(start, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addContainerGap(64, Short.MAX_VALUE))
-        );
-        jLayeredPane1Layout.setVerticalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(h, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(m, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(s, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ms, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(start)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(stop)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(reset)
-                .addContainerGap(16, Short.MAX_VALUE))
-        );
+        jPanel1.add(jLayeredPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 320, 198));
 
         close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/stopwatch/exit.png"))); // NOI18N
         close.setContentAreaFilled(false);
@@ -151,6 +114,7 @@ public class Stopwatch extends javax.swing.JFrame {
                 closeActionPerformed(evt);
             }
         });
+        jPanel1.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(289, 0, 25, -1));
 
         minimize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/stopwatch/minimize.png"))); // NOI18N
         minimize.setContentAreaFilled(false);
@@ -160,36 +124,15 @@ public class Stopwatch extends javax.swing.JFrame {
                 minimizeActionPerformed(evt);
             }
         });
+        jPanel1.add(minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 0, 25, -1));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/stopwatch/clock.png"))); // NOI18N
         jLabel1.setText("Stopwatch");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 33));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(minimize, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(close, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(close, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(minimize, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(7, 7, 7)
-                .addComponent(jLayeredPane1)
-                .addGap(0, 0, 0))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/stopwatch/lg.jpg"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 240));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -318,6 +261,7 @@ public class Stopwatch extends javax.swing.JFrame {
     private javax.swing.JButton close;
     private javax.swing.JLabel h;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel m;
